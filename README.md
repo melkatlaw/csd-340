@@ -2,5 +2,5 @@
  Web Development with HTML and CSS
 # CSD 340 Web Developmwnr with HTML and CSS
 ## Contributors
-..* Adam Bailey
-..* Melissa Lawrence
+  * Adam Bailey
+  * Melissa Lawrence
