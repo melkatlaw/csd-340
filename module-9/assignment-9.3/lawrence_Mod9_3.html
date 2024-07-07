@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+	<meta name="description"
+		content = "Monty Python and the Holy Grail Quote"/>
+	<meta http-equiv="author"
+		content="Melissa Lawrence"/>
+	<meta name= "robots" 
+		content="nofollow"/>
+	<meta http-equiv="expires"
+		content="Sunday, 21 July 2024 23:59:59 GMT"/>
+	<link href="lawrence_Mod2_2.css" type="text/css" rel="stylesheet"/>
+
+<script>
+		// Declare four JavaScript variables
+		var text1 = "three";
+		var text2 = "Four";
+		var text3 = "two";
+		var text4 = "Five";
+
+	function replaceText(spanId, text) {
+	    document.getElementById(spanId).innerHTML = text;
+	}
+</script>
+
+</head>
+
+
+
+<body>
+
+<div id="container">
+	<h1> Assignment 9.3: JavaScript - Part 1 </h1>
+	<h2> Monty Python's Holy Hand Grenade Quote</h2>
+	<p> And the Lord spake, saying, "First shalt thou take out the Holy Pin. Then shalt thou count to <span id="span1">______</span>, no more, no less. </p>
+	<p> Three shall be the number thou shalt count, and the number of the counting shalt be three. </p>
+	<p> <span id="span2">______</span> shalt thou not count, neither count thou <span id="span3">______</span>, excepting that thou then proceed to three. <span id="span4">______</span> is right out. </p>
+	<p> Once the number three, being the third number, be reached, then lobbest thou thy Holy Hand Grenade of Antioch towards thou foe, who, being naughty in My sight, shall snuff it." <br/>
+<br/>
+	<button type ="button"
+    		onclick="document.getElementById('span4').innerHTML = text4">Five</button>
+	<button type ="button"
+		onclick="document.getElementById('span1').innerHTML = text1">three</button>
+	<button type ="button"
+		onclick="document.getElementById('span2').innerHTML = text2">Four</button>
+	<button type ="button"
+		onclick="document.getElementById('span3').innerHTML = text3">two</button>
+	</p>
+
+</div>
+
+<hr  />
+</body>
+
+<address><a href="http://www.bellevue.edu">Bellevue University</a><br/ >
+1000 Galvin Road South <br/>
+Bellevue, NE 68005</address>
+
+</html>
