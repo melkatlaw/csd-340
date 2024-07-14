@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+	<meta name="description"
+		content = "Global Warming affects on Coral"/>
+	<meta http-equiv="author"
+		content="Melissa Lawrence"/>
+	<meta name= "robots" 
+		content="nofollow"/>
+	<meta http-equiv="expires"
+		content="Wednesday, 31 July 2024 23:59:59 GMT"/>
+
+    <script> 
+
+      function displayImage(imageFile){ 
+        var largerImage = document.getElementById("mainImage"); 
+        var newNode = document.createElement("img"); 
+        newNode.id = "mainImage"; 
+        newNode.src = imageFile; 
+        newNode.alt = "Large Image"; 
+        newNode.className = "mainImage"; 
+        newNode.style.width = "300px"; 
+        newNode.style.height = "200px"; 
+        largerImage.parentNode.replaceChild(newNode, largerImage);
+      }  
+
+    </script> 
+
+  
+
+    <link href="lawrence_Mod10_3.css" type="text/css" rel="stylesheet"/>
+  
+</head> 
+
+  
+<body> 
+
+    <h1>Assignment 10.3: JavaScript - Part 2</h1> 
+
+        <br />
+
+        <p>Click once to change image. Click twice to change image back.</p> 
+
+        <br /> 
+
+    <h2>Ice Melt</h2>
+
+    <div> 
+          <a  onclick="document.images['Alaska'].src='Alaska_After.png';" 
+              ondblclick= "document.images['Alaska'].src='Alaska_Before.png';"      > 
+              <img border = 0 name = "Alaska" src = "Alaska_Before.png"> 
+         </a>
+    </div>
+
+           <br /> 
+
+    <div 
+         onmouseover="this.style.color='gray';" 
+         onmouseout= "this.style.color='black';"     > 
+
+         <p><a href="https://oceanservice.noaa.gov/facts/sea-ice-climate.html" target="_blank">Ice melt</a> due to global warming leads to rising sea levels, which can result in the submersion of coral reefs, disrupting their access to sunlight which is essential for their survival. Ice is also highly reflective and bounces a large portion of the sun’s rays back into space, which helps to regulate the Earth’s temperature. When ice melts, it exposes the darker ocean surface. This darker surface absorbs more sunlight instead of reflecting it, leading to an increase in heat absorption. Rising sea temperatures lead to mass coral bleaching events and infectious disease outbreaks, which are becoming more frequent.</p>
+    </div>
+
+          <br /> 
+
+         <h3>Watch now <a href="https://www.youtube.com/watch?v=NHf-xSvpF-Y&list=PLLW-qoCMKQsxa40eB1YUuSs3MKaYvd53b&index=5" target="_blank">Google Earth</a></h2>
+ 
+          <br />
+
+    <h2>Coral Bleaching</h2>
+      
+
+    <div> 
+          <a  onclick="document.images['Coral'].src='Coral_After.png';" 
+              ondblclick= "document.images['Coral'].src='Coral_Before.png';"      > 
+              <img border = 0 name = "Coral" src = "Coral_Before.png"> 
+         </a>
+
+    </div> 
+
+        <br /> 
+
+    <div 
+         onmouseover="this.style.color='gray';" 
+         onmouseout= "this.style.color='black';"     > 
+
+         <p><a href="https://oceanservice.noaa.gov/facts/coral_bleach.html" target="_blank">Coral bleaching</a> is a process where corals turn white due to the loss of symbiotic algae (zooxanthellae) and their photosynthetic pigments. This can occur when corals are stressed by changes in conditions such as temperature, light, or nutrients.  The loss of reefs disrupts biodiversity and impacts human economies, such as tourism and fisheries, that depend on these ecosystems.</p>
+
+
+    </div>
+
+        <br /> 
+
+        <h3>Watch now <a href= "https://www.youtube.com/watch?v=QltN3FjwTu0" target="_blank">Chasing Corals</a></h2>
+      
+        <br />   
+
+  </body> 
+
+  
+
+</html> 
