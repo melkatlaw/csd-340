@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+
+    <title>CSD 340 Web Development with HTML and CSS</title> 
+
+    <script> 
+        var arr = []; 
+        function addToArray() { 
+            var inputBox = document.getElementById('inputBox'); 
+            var value = inputBox.value; 
+            arr.push(value); 
+            alert('Added "' + value + '" to the list at #' + arr.length); 
+            inputBox.value = ''; 
+        } 
+
+        function deleteFromArray() { 
+            var index = prompt('Enter the # of the item to delete:'); 
+            index = parseInt(index) - 1; 
+            if (index >= 0 && index < arr.length) { 
+                arr.splice(index, 1); 
+                alert('Item deleted successfully.'); 
+            } else { 
+                alert('Not on list.'); 
+            } 
+        } 
+
+        function displayArray() { 
+            var displayArea = document.getElementById('displayArea'); 
+            displayArea.innerHTML = ''; 
+            for (var i = 0; i < arr.length; i++) { 
+                displayArea.innerHTML += (i + 1) + '. ' + arr[i] + '<br>'; 
+            } 
+        } 
+    </script> 
+
+</head> 
+
+<body> 
+
+    <h1>Assignment 11.2: JavaScript - Part 3</h1> 
+
+    <h2>Build your To Do List</h2> 
+
+    <p>Use the Add Buton to add items to list. Use Delete Button to remove items from list. <br  /> 
+       Use the Display Button to refresh and see the most current list.</p> 
+  
+    <input type="text" id="inputBox"> 
+    <button onclick="addToArray()">Add</button> 
+    <button onclick="deleteFromArray()">Delete</button> 
+    <button onclick="displayArray()">Display</button> 
+    <div id="displayArea"></div> 
+
+</body> 
+
+</html> 
+
+ 
