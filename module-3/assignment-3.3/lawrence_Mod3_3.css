@@ -26,6 +26,9 @@ ol, ul {
     border: 1px dashed red;
     border-radius: 15px;
     padding: 10px;
+}
+
+.ul-container ul {
     list-style-type: upper-roman;
 }
 

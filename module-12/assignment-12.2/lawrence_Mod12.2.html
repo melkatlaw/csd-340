@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>CSD 340 Web Development with HTML and CSS</title>
+	<link href="C:\csd\csd-340\module-3\assignment-3.3\lawrence_Mod3_3.css" type="text/css" rel="stylesheet">
+
+<script>
+var books = [
+	{book: "The Hobbit by J.R.R. Tolkien", index: 0},
+	{book: "How to Talk so Kids Will Listen by Adele Faber", index: 1},
+	{book: "The Art Of Happiness by Dalai Lama XIV", index: 2},
+	{book: "An Elderly Lady Must Not Be Crossed by Helene Tursten", index: 3},
+	{book: "The Alloy of Law by Brandon Sanderson", index: 4},
+	{book: "The Darkness Manifesto by Johan Eklöf", index: 5},
+	{book: "Clan of the Cave Bear by Jean M. Auel", index: 6},
+	{book: "Mating in Captivity by Esther Perel", index: 7},
+	{book: "Drop Dead Healthly by AJ Jacobs", index: 8},
+	{book: "Hercule Poirot a Complete Stories by Agatha Christie", index: 9}
+];
+var isDescending = false;
+
+function displayBooks(bookList) {
+    var list = document.getElementById("bookList");
+    list.innerHTML = "";
+    for (var i = 0; i < bookList.length; i++) {
+        var listItem = document.createElement("li");
+        listItem.textContent = isDescending ? `${bookList.length - i}. ${bookList[i].book}` : `${i + 1}. ${bookList[i].book}`;
+        list.appendChild(listItem);
+    }
+}
+
+function sortListAsc() {
+    isDescending = false;
+    var booksCopy = [...books];
+    booksCopy.sort(function(a, b) {
+        return a.index - b.index;
+    });
+    displayBooks(booksCopy);
+}
+
+function sortListDesc() {
+    isDescending = true;
+    var booksCopy = [...books];
+    booksCopy.sort(function(a, b) {
+        return b.index - a.index;
+    });
+    displayBooks(booksCopy);
+}
+
+window.onload = function() {
+    displayBooks(books);
+}
+</script>
+
+<style>
+ol {
+    list-style-type: none;
+}
+</style>
+
+</head>
+
+<body>
+<div id="container">
+	<h1>Assignment 12.2: JavaScript - Part 4</h1>
+	<div class="side-by-side">
+		<div class="ol-container">
+		<h3>Top 10 Favorite Books</h3>
+		<button onclick="sortListAsc()">Top to Bottom</button>
+		<button onclick="sortListDesc()">Bottom to Top</button>
+		<hr>
+		<ol id="bookList"></ol>
+		</div>
+	</div>
+	<div class="side-by-side">
+		<div class="ul-container">
+		<h3>Things I've Learn Since the Course Started</h3>
+		<ul>
+			<li>I need more hours in the day or week to do everything and get sleep</li>
+			<li>Check which folder you're in when in the command window and pushing to git</li>
+			<li>HTML and CSS are a nice break from Java coding</li>
+			<li>My cat doesn't like when I am on the computer and he wants to play, he jumps on the kitchen counter for attention, little brat.</li>
+			<li>After writing the book list I want time to read for fun again, sorry Prof Adam the text books are not what I'd call fun reading....</li>	
+		</ul>
+		</div>
+	</div>
+	<div class="bottom-div">
+		<a href="../../index.html">Back to Landing Page</a>
+	</div>
+</div>
+</body>
+</html>
